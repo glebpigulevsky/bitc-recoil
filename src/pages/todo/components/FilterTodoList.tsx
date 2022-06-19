@@ -4,11 +4,9 @@ import { todoListFilterState } from "../../../state-manager/todo/todoListFilterS
 
 export const FilterTodoList = () => {
   const [filter, setTodosFilterList] = useRecoilState(todoListFilterState);
-  console.log("h");
+
   const onRadioClick = useCallback(
     (event: any) => {
-      console.log("hello");
-
       setTodosFilterList(event.target.value);
     },
     [setTodosFilterList]
